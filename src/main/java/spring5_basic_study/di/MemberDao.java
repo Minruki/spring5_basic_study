@@ -28,14 +28,15 @@ public class MemberDao {
 		}
 	}
 
+	public Collection<Member> selectAll() {
+		return map.values();
+	}
+
 	public Map<String, Member> selectMemberByAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public Collection<Member> selectAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 }

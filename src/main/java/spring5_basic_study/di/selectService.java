@@ -13,4 +13,13 @@ public class selectService {
 	public Map<String, Member> showMember(){
 		return memberDao.selectMemberByAll();
 	}
-}
+}                                                             
+
+
+
+
+
+
+
+
+

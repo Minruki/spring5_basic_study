@@ -2,6 +2,7 @@ package spring5_basic_study.printer;
 
 import spring5_basic_study.di.Member;
 import spring5_basic_study.di.MemberDao;
+import spring5_basic_study.di.MemberNotFoundException;
 
 public class MemberInfoPrinter {
 
@@ -11,8 +12,8 @@ public class MemberInfoPrinter {
 	public void printMemberInfo(String email) {
 		Member member = memDao.selectByEmail(email);
 		if (member == null) {
-			System.out.println("데이터 없음\n");
-			return;
+			throw new MemberNotFoundException("데이터 없음");
+		
 		}
 		printer.print(member);
 		System.out.println();
