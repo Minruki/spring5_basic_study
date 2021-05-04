@@ -3,7 +3,6 @@ package spring5_basic_study.di;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class MemberDao {
 	private static long nextId = 0;
@@ -22,21 +21,8 @@ public class MemberDao {
 		map.put(member.getEmail(), member);
 	}
 	
-	public void showList() {
-		for(Entry<String, Member> e : map.entrySet()) {
-			System.out.printf("%s -> %s%n", e.getKey(), e.getValue());
-		}
-	}
-
-	public Collection<Member> selectAll() {
+	public Collection<Member> selectAll(){
 		return map.values();
 	}
-
-	public Map<String, Member> selectMemberByAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	
-
 }
